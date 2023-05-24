@@ -126,7 +126,7 @@ section {
 
 /* CONTENT */
 .apply_submit{
-    margin-top: 18px;
+    margin-top: 20px;
     border: none;
     background-color: var(--primary-bg);
     color: white;
@@ -146,6 +146,10 @@ section {
     width: 46%;
 }
 
+.apply_left{
+    width: 52%;
+}
+
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
@@ -156,7 +160,7 @@ section {
 
 .form_control p{
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .form_input{
@@ -169,7 +173,7 @@ section {
     width: 100%;
 }
 
-input:focus{
+select:focus, input:focus{
     outline: none !important;
 }
 
@@ -197,6 +201,10 @@ select.form_input option{
 #form_school_list div{
     padding: 4px 8px;
     border-bottom: 2px solid var(--primary-bg);
+}
+
+#form_school_list div:last-child{
+    border-bottom: none;
 }
 
 #form_school_list div:hover{
