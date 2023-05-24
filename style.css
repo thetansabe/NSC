@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root {
+  --primary-text: white;
+  --primary-bg: rgb(211, 22, 53);
+  --glass-bg: rgba(218, 215, 215, 0.123);
+  --secondary-bg: rgba(201, 15, 40, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+a:focus {
+  color: var(--primary-text) !important;
+}
+
+body {
+  background-image: url("imgs/test_back1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--primary-text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(199, 194, 194, 0.075);
+  z-index: 1;
+  padding: 10px 70px;
+}
+
+.header_right {
+}
+
+.header_left {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.header_hamburger {
+  display: none;
+}
+
+.header_left a {
+  position: relative;
+}
+
+.header_left a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--primary-text);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s all linear;
+}
+
+.header_left a:hover::after {
+  width: 100%;
+}
+
+.header_middle{
+    width: 260px;
+}
+
+.header_countdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countdown_box{
+    width: 36px;
+    height: 36px;
+    border: transparent;
+    background-color: rgba(218, 215, 215, 0.123);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_countdown span{
+    font-size: small;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 0 70px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* CONTENT */
+.apply_submit{
+    margin-top: 18px;
+    border: none;
+    background-color: var(--primary-bg);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.apply_form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.apply_right{
+    width: 46%;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.form_control{
+    margin-bottom: 18px;
+}
+
+.form_control p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.form_input{
+    border: none;
+    border-bottom: 2px solid var(--primary-bg);
+    background-color: transparent;
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+input:focus{
+    outline: none !important;
+}
+
+.form_input::placeholder{
+    color: var(--primary-text);
+}
+
+select.form_input option{
+    background-color: var(--secondary-bg);
+}
+
+#form_school_wrapper{
+    position: relative;
+}
+
+#form_school_list{
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+}
+
+#form_school_list div{
+    padding: 4px 8px;
+    border-bottom: 2px solid var(--primary-bg);
+}
+
+#form_school_list div:hover{
+    background-color: var(--primary-bg);
+}
+
+@media only screen and (max-width: 728px) {
+  .header_left {
+    display: none;
+  }
+
+  .header_hamburger {
+    display: block;
+    transition: 0.4s all linear;
+  }
+
+  .apply_left, .apply_right{
+    width: 100%;
+}
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSC | Cuộc thi Đầu tư chứng khoán</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_right">NSC</div>
+
+      <div class="header_middle">
+        <div class="header_countdown">
+          <div class="countdown_box" id="day"></div>
+          <div class="countdown_box" id="hour"></div>
+          <div class="countdown_box" id="min"></div>
+          <div class="countdown_box" id="sec"></div>
+        </div>
+
+        <div class="header_countdown">
+          <span>Ngày</span>
+          <span>Giờ</span>
+          <span>Phút</span>
+          <span>Giây</span>
+        </div>
+      </div>
+
+      <div class="header_left">
+        <a href="#">Về NSC</a>
+        <a href="#">Thể lệ IC</a>
+        <a href="#">Human of IC</a>
+        <a href="#">Dấu ấn</a>
+      </div>
+
+      <div class="header_hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <section class="hidden">
+      <h1>Hi Mom</h1>
+      <p>This is my website</p>
+    </section>
+
+    <section class="hidden">
+      <div class="apply_form">
+        <div class="apply_left">
+            <div class="form_control">
+                <p>Họ và tên (VD: Nguyễn Văn A):</p>
+                <input type="text" placeholder="Tên của bạn" class="form_input" id="form_name">
+            </div>
+    
+            <div class="form_control">
+                <p>Ngày/Tháng/Năm sinh của bạn:</p>
+                <input type="date" class="form_input" id="form_dob">
+            </div>
+    
+            <div class="form_control" id="form_school_wrapper">
+                <p>Trường học (VD: ĐH Tôn Đức Thắng):</p>
+                <input type="text" id="form_school" class="form_input" placeholder="Tìm tên trường">
+                <div id="form_school_list"></div>
+            </div>
+    
+            
+          </div>
+    
+          <div class="apply_right">
+            <div class="form_control">
+                <p>Mã số sinh viên:</p>
+                <input type="text" placeholder="Tên của bạn" class="form_input"></input>
+            </div>
+    
+            <div class="form_control">
+                <p>Bạn học năm:</p>
+                <select id="form_schoolyear" class="form_input">
+                    <option value="1">Năm nhất</option>
+                    <option value="2">Năm hai</option>
+                    <option value="3">Năm ba</option>
+                    <option value="4">Năm bốn</option>
+                    <option value="5">Đã tốt nghiệp (dưới 6 tháng)</option>
+                    <option value="6">Khác</option>
+                </select>
+            </div>
+    
+            <div class="form_control">
+                <p>Số điện thoại:</p>
+                <input type="text" placeholder="0xxxxxxxxx" class="form_input" id="form_phone">
+            </div>
+    
+            <div class="form_control">
+                <p>Khu vực:</p>
+                <select id="form_area" class="form_input">
+                    <option value="Nam">Miền Nam</option>
+                    <option value="Bac">Miền Bắc</option>
+                    <option value="Trung">Miền Trung</option>  
+                </select>
+            </div>
+          </div>
+      </div>
+
+      <button class="apply_submit">
+        Nộp đơn
+      </button>
+    </section>
+
+    <section class="hidden">
+      <h2>It's really good</h2>
+    </section>
+
+    <section class="hidden">
+      <h2>It's really good</h2>
+    </section>
+  </body>
+</html>
